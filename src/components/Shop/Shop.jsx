@@ -1,18 +1,12 @@
 import { inventoryData } from "../../data/data";
+import InventoryList from "../InventoryList/InventoryList";
 
 const Shop = () => {
     // console.log(inventoryData);
     return (
         <main>
             <h1>Shop</h1>
-            <ul>
-                {inventoryData.map((item) => (
-                    <li key={item._id}>
-                        <p>{item.name}</p>
-                        <p>Price: {item.price}</p>
-                    </li>
-                ))}
-            </ul>
+            <InventoryList inventory = {inventoryData} />
         </main>
     );
 };
